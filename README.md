@@ -1,5 +1,5 @@
 # Python-Binary2CSV
-Python Script for converting Binary files to CSV
+Binary to CSV - Python Script for converting Binary files to CSV
 
 A simple but useful utility that I used to reverse-engineer some generic data files. The output can be graphed in Excel to search for patterns.
 Developed and tested in Python 3.
