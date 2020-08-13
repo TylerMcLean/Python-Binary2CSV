@@ -6,7 +6,6 @@ newline = 10                                                                    
 
 # -------------------
 
-newline = int((newline * 2) + ((1 / delim) * newline))                          # Calculate frequency of newlines
 delim = delim * 2                                                               # Bytes in hex are 2 characters long
 
 f=open(input,"rb")
@@ -22,10 +21,11 @@ for x in range(cLength):                                                        
   content[x] = int(content[x],16)
 
 for x in range(cLength):                                                        # Insert NewLines
-  if not (x)%10 and x>0:
+  if not (x)%newline and x>0:
     content[x] = "\n" + str(content[x])
 
 content = listToStr = ','.join(map(str, content))                               # Convert to string
+content = content.replace(",\n", "\n")                                          # Remove Trailing Commas
 
 o.write(content)
 o.close()
